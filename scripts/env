@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export BUILD_NUMBER=${BUILD_NUMBER:-latest}
+
+export POSTGRES_USER=${POSTGRES_USER:-docker}
+export POSTGRES_DB=${POSTGRES_DB:-docker}
+export POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-docker}
+export POSTGRES_HOST_PORT=${POSTGRES_HOST_PORT:-5444}

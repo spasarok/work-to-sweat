@@ -1,0 +1,25 @@
+version: '2'
+services:
+  # dev:
+  #   build:
+  #     context: docker/flask
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - dev_db
+  #   environment:
+  #     - POSTGRES_DB
+  #     - POSTGRES_USER
+  #     - POSTGRES_PASSWORD
+  #   image: potamus:${BUILD_NUMER}
+  #   ports:
+  #     - ${APP_HOST_PORT}:5000
+  dev_db:
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+    image: postgres:10.3-alpine
+    ports:
+      - ${POSTGRES_HOST_PORT}:5432
+    volumes:
+       - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
