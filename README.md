@@ -1,3 +1,7 @@
+# API spec
+
+All ids are integers.
+
 # /api/users/{id}
 
 ```
@@ -99,5 +103,16 @@
         "Night",
         "Late night"
     ]
+}
+```
+
+# /api/messages/id[]={id}&id[]={id}
+
+* `GET` request for displaying
+* `POST` request for updating
+
+```
+{
+    "message": "text"
 }
 ```
