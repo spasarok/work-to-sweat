@@ -1,4 +1,4 @@
-#/api/users/{id}
+# /api/users/{id}
 
 ```
 {
